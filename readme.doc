@@ -1,0 +1,13 @@
+Files in this project
+
+admin.html - html page for displaying admin system
+admin.js - Ajax. passes admin requests to server and updates the admin html page
+adminassign.php - receives requests assigning taxis to bookings and passes them on to database manager
+admincheckbooking - receives requests to display upcoming bookings and passes them on to database manager
+
+booking.html - html page for displaying booking system
+bookingajax.js - AJAX. Validates and passes admin requests to server and updates the booking html page
+postcaprequest.php - receives requests requesting bookings and passes them on to database manager
+taxidbmanager.php - does all work communicating with database. Creates bookings, assigns bookings, retrieves bookings.
+xhr.js - Creates XMLHTTPRequests
+bookingSQL.txt - sql commands to create database

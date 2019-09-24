@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type>"text.html; charset="utf-8">
+		<script type="text/javascript" src="xhr.js"></script>
+		<script type="text/javascript" src="admin.js"> </script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	
+	<body>
+		<ul>
+			<li style="float:left"><a href="booking.html">Taxi!</a></li>
+			<li><a href="booking.html">Bookings</a></li>
+			<li><a href="admin.html">Admin</a></li>			
+		</ul>
+
+		<h1>
+			TaxiAdmin
+		</h1>
+		
+		<div class="row">
+			<!--Button for retrieving next two hours of requests-->
+			<div class="col">
+				<form><br>	
+				Retrieve unassigned booking details for the next two Hours<br>
+
+				<input name="retrieve" type ="button" value="Retrieve!" onClick = "getCurrentPickups('admincheckbooking.php','targetRetrieveDiv', 2)" >
+				</form>
+				
+				<div id="targetRetrieveDiv"> 
+					<p>
+						The fetched data will go here<br>			
+					</p>  
+				</div>		
+			</div>
+					
+			<!--assigning taxis to bookings-->
+			<div class="col">
+				<form><br>
+				<!--input booking number-->
+				Booking Number: <input type="text" name="bookingNumber" pattern ="[A-Za-z ]+" required="required"><br>			
+
+				<!--Button for assigning taxi to given booking-->
+				<input name="submit" type ="button" value="Assign!" onClick = "assignTaxi('adminassign.php','assignResultDiv', bookingNumber.value)" >
+				</form>
+				
+				<!--did it work?-->
+				<div id="assignResultDiv"> 
+					<p>
+						The fetched data will go here<br>			
+					</p>  
+				</div>		
+			</div>
+		</div>
+		
+	</body>
+</html>
